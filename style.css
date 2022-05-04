@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+    color: #000;
+    font-size: 15px;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+a{
+    color: #262626;
+    text-decoration: none;
+
+}
+
+ul{
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1500px;
+    margin: auto;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    font-size: 13px;
+    padding: 0 20px;
+}
+
+.logo img {
+    width: 110px;
+}
+
+.menu-bar {
+    cursor: pointer;
+    position: absolute;
+}
+
+.menu-bar {
+    opacity: 0.5 ;
+}
+
+
+.main-ul {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-left: 40px;
+    z-index: 2;
+}
+
+.main-ul li{
+   padding: 0 20px;
+}
+
+.main-ul a {
+    padding-bottom: 2px;
+}
+
+.main-ul a:hover{
+    opacity: 0.9;
+}
+
+.main-icon{
+    display: flex;
+}
+
+.main-icon a {
+    margin-left: 30px;
+}
+
+.main-icon a:hover {
+    opacity: 0.9;
+}
+
+
+.menu-bar {
+    position: absolute;
+    right: 40px;
+    z-index: 2;
+    top: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+/*       NAVBAR ENDS HERE        */
+
+.big-box {
+    position: relative;
+    height: 400px;
+    background: url(images/image-1.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.content {
+    width: 50%;
+    padding-left: 2rem;
+}
+
+
+h2{
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.btn {
+    margin-top: 10px;
+    margin-left: 2rem;
+}
+
+.big-btn {
+    background: #262626;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 20px;
+    display: inline-block;
+    border: 0;
+}
+
+.small-btn{
+    padding: 10px 20px;
+    display: inline-block;
+    font-weight: bold;
+    background: transparent;
+    border: 0;
+    padding: 10px 20px;
+}
+
+.big-btn:hover,
+.small-btn:hover{
+    opacity: 0.8;
+}
+
+/*                           BOXES                            */
+
+.box {
+    display: flex;
+    flex-direction: column;
+}
+
+.boxes {
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 40px;
+}
+
+.box h4 {
+    padding: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.box p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #262626;
+}
+
+.box .small-btn {
+    text-align: left;
+    font-weight: 400;
+    padding: 10px 0;
+    color: teal;
+}
+
+.second-big-box {
+    background-image: url(images/image-21.webp);
+}
+
+.second-boxes {
+    margin-top: 0;
+}
+
+h3{
+    margin: 50px 0 20px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+.social-media {
+    display: flex;
+    height: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+footer {
+    background: #f2f2f2;
+}
+
+.footer-content {
+    display: flex;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    line-height: 2rem;
+}
+
+footer a {
+    font-size: smaller;
+    color: #616161;
+}
+
+.others {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px 30px 30px;
+}
+
+
+/*                       media query                                   */
+
+@media(max-width: 700px){
+    .main-ul {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #f2f2f2;
+        width: 50%;
+        height: 100vh;
+        border-right: #ccc 1px solid;
+        opacity: 0.7;
+        padding: 2rem;
+        transform: translateX(-600px);
+    }
+
+    .main-ul li {
+        padding: 0.8rem;
+        border-bottom: #ccc 1px solid;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .menu-bar {
+        display: block;
+    }
+
+    .main-ul li:last-child{
+        border-bottom: none;
+    }
+
+    .nav .slide {
+       transform: translateX(-20px);
+    }
+
+    .main-icon {
+        margin-right: 50px;
+    }
+    
+
+    .big-box {
+        align-items: center;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .btn {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .small-btn,
+    .big-btn {
+        padding: 5px 10px;
+    }
+
+    .footer-content {
+        flex-direction: column-reverse;
+    }
+
+    .others{
+        flex-direction: column;
+    }
+    
+}
+
+
+
